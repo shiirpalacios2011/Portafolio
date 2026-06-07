@@ -29,24 +29,22 @@ const jobs = [
     ],
   },
   {
-    role: 'QA automatizadora Junior-Cliente: Claro',
+    role: 'QA Automatizadora Trainee',
     company: 'Tsoft',
-    date: 'Junio 2024 - Diciembre 2025',
+    date: 'Mayo 2023 - Junio 2025',
     status: 'Finalizado',
     location: 'Trabajo remoto',
     description:
-      'Trabajé en colaboración con Claro evaluando y optimizando aplicaciones críticas mediante pruebas de performance, carga y estrés.\nUtilicé herramientas como LoadRunner, Postman, Jenkins, OpenShift, Swagger y bases de datos Oracle.\nAnalicé tiempos de respuesta, conexiones simultáneas, límites de carga y posibles cuellos de botella antes de las liberaciones.\nTambién participé en la creación de reportes de rendimiento y en la definición de escenarios reales de prueba.\nColaboré con equipos internacionales, incluyendo comunicación en inglés con equipos de India para coordinar pruebas y resultados.',
+      'Trabajé como QA automatizadora trainee para clientes del rubro seguros y financiero, como Consorcio Seguros, Vida Security y Grupo Security.\nParticipé en la evaluación de sistemas, microservicios y servicios web para detectar si necesitaban pruebas de performance.\nAnalicé tiempos de respuesta, conexiones simultáneas, límites de carga y comportamiento del sistema ante muchas operaciones.\nTambién colaboré en pruebas sobre consultas y transacciones a gran escala, buscando asegurar estabilidad y buen rendimiento.\nRealicé informes con resultados, detección de cuellos de botella y observaciones sobre horarios de mayor carga.',
     responsibilities: [],
     blocks: [
       {
         title: 'Tecnologías',
         items: [
-          'LoadRunner',
-          'Postman',
-          'Jenkins',
-          'OpenShift',
-          'Swagger',
-          'Oracle',
+       'QA Automation', 
+       'Performance Testing', 
+       'SQL', 
+       'Microservicios'
         ],
       },
     ],
