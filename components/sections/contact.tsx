@@ -11,20 +11,20 @@ const contacts = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'carolinacomba42@gmail.com',
-    href: 'mailto:carolinacomba42@gmail.com',
+    value: 'shiirpalacios@gmail.com',
+    href: 'mailto:shiirpalacios@gmail.com',
   },
   {
     icon: LinkedinIcon,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/carolinacomba',
-    href: 'https://linkedin.com/in/carolinacomba',
+    value: 'linkedin.com/in/shirleypalacios96/',
+    href: 'https://www.linkedin.com/in/shirleypalacios96/',
   },
   {
     icon: GithubIcon,
     label: 'GitHub',
-    value: 'github.com/carolinacomba',
-    href: 'https://github.com/carolinacomba',
+    value: 'github.com/shiirpalacios2011',
+    href: 'https://github.com/shiirpalacios2011',
   },
 ]
 
