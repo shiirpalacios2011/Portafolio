@@ -18,9 +18,9 @@ export function Footer() {
               CC
             </span>
             <div>
-              <p className="font-semibold">Carolina Comba</p>
+              <p className="font-semibold">Shirley Palacios</p>
               <p className="text-sm text-muted-foreground">
-                Desarrolladora Full Stack
+                Desarrolladora Full Stack - QA Automation
               </p>
             </div>
           </div>
@@ -30,7 +30,7 @@ export function Footer() {
           </p>
           <div className="mt-5 flex gap-3">
             <a
-              href="https://github.com/carolinacomba"
+              href="https://github.com/shiirpalacios2011"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -39,7 +39,7 @@ export function Footer() {
               <GithubIcon className="size-4" />
             </a>
             <a
-              href="https://linkedin.com/in/carolinacomba"
+              href="https://www.linkedin.com/in/shirleypalacios96/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -69,7 +69,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <p className="mx-auto max-w-6xl px-6 py-6 text-center text-sm text-muted-foreground">
-          © 2025 Carolina Comba. Desarrollado con dedicación.
+          © 2026 Shirley Palacios. Desarrollado con dedicación.
         </p>
       </div>
     </footer>

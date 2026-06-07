@@ -40,14 +40,15 @@ export function About() {
           </div>
           <div className="space-y-4 text-pretty leading-relaxed text-muted-foreground">
             <p>
-              Soy Shirley Palacios, desarrolladora Full Stack de Córdoba,
+              Soy Shirley Palacios, desarrolladora Full Stack-
+              QA Automation,
               Argentina.
             </p>
             <p>
               Estudio la Tecnicatura Universitaria en Programación en la
-              UTN-FRLR. Me formé en desarrollo backend y frontend, trabajando con
+              UTN-FRLR. Me formé en desarrollo backend y frontend de forma personal, trabajando con
               tecnologías como Java, Spring Boot, C#, .NET, Angular, JavaScript
-              y bases de datos SQL.
+              y bases de datos SQL.Tengo conocimientos en pruebas de performance y automatización  de pruebas, utilizando herramientas como LoadRunner,Jmeter, Postman y Jenkins.
             </p>
             <p>
               Me interesa crear soluciones claras, eficientes y fáciles de

@@ -30,12 +30,43 @@ const contacts = [
 
 export function Contact() {
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSent(true)
-    e.currentTarget.reset()
-    setTimeout(() => setSent(false), 4000)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    setLoading(true)
+    setError(false)
+    setSent(false)
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/shiirpalacios@gmail.com',
+        {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        }
+      )
+
+      if (response.ok) {
+        setSent(true)
+        form.reset()
+        setTimeout(() => setSent(false), 4000)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -64,6 +95,7 @@ export function Contact() {
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
                   <c.icon className="size-5" />
                 </span>
+
                 <div className="min-w-0">
                   <p className="text-sm font-semibold">{c.label}</p>
                   <p className="truncate text-sm text-muted-foreground">
@@ -80,7 +112,18 @@ export function Contact() {
           className="rounded-2xl border border-border bg-card p-7"
         >
           <h3 className="mb-6 text-lg font-semibold">Envíame un mensaje</h3>
+
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo mensaje desde mi portfolio"
+            />
+
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input type="text" name="_honey" className="hidden" />
+
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm font-medium">
                 Nombre
@@ -94,6 +137,7 @@ export function Contact() {
                 className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
               />
             </div>
+
             <div className="flex flex-col gap-2">
               <label htmlFor="email" className="text-sm font-medium">
                 Email
@@ -107,6 +151,7 @@ export function Contact() {
                 className="rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
               />
             </div>
+
             <div className="flex flex-col gap-2">
               <label htmlFor="message" className="text-sm font-medium">
                 Mensaje
@@ -120,12 +165,27 @@ export function Contact() {
                 className="resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
               />
             </div>
+
+            {error && (
+              <p className="text-sm text-red-400">
+                No se pudo enviar el mensaje. Intentá nuevamente o escribime por
+                email.
+              </p>
+            )}
+
+            {sent && (
+              <p className="text-sm text-green-400">
+                ¡Mensaje enviado correctamente!
+              </p>
+            )}
+
             <Button
               type="submit"
-              className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 disabled:opacity-60"
             >
               <Send className="size-4" />
-              {sent ? '¡Mensaje enviado!' : 'Enviar mensaje'}
+              {loading ? 'Enviando...' : 'Enviar mensaje'}
             </Button>
           </form>
         </Reveal>
