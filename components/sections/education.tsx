@@ -5,11 +5,11 @@ import { GraduationCap, Check, Award } from 'lucide-react'
 const education = [
   {
     title: 'Tecnicatura Universitaria en Programación',
-    institution: 'Universidad Tecnológica Nacional - FRC',
-    date: '2022 - 2025',
-    status: 'Finalizado',
+    institution: 'Universidad Tecnológica Nacional - FRLR',
+    date: '2026 - 2027',
+    status: 'En curso',
     description:
-      'Me gradué de la Tecnicatura Universitaria en Programación en la UTN-FRC, donde adquirí conocimientos sólidos en desarrollo de software, metodologías ágiles y buenas prácticas de programación.',
+      'Estudio la Tecnicatura Universitaria en Programación en la UTN-FRLR, donde adquirí conocimientos sólidos en desarrollo de software, metodologías ágiles y buenas prácticas de programación.',
     blocks: [
       {
         title: 'Desarrollo Backend',
@@ -41,26 +41,70 @@ const education = [
     award: null,
   },
   {
-    title: 'Fundamentos de Programación',
-    institution: 'Integral Capacitando',
-    date: 'Marzo 2021 - Agosto 2021',
+    title: 'Testing QA Automatizado / Soft Skills / Introducción a Python',
+    institution: 'Digital House',
+    date: '2025',
     status: 'Finalizado',
     description:
-      'Curso introductorio donde aprendí las bases fundamentales de la programación, incluyendo lógica, estructuras de control, funciones, programación orientada a objetos y bases de datos.',
+      'Incorporé conocimientos para el diseño, ejecución y automatización de pruebas de software. También adquirí bases de Python y habilidades blandas orientadas al trabajo en equipo, comunicación y resolución de problemas.',
     blocks: [
       {
         title: 'Temas cursados',
         items: [
-          'Introducción a la programación',
-          'Estructuras de control de flujo',
-          'Programación orientada a objetos',
-          'Variables y tipos de datos',
-          'Funciones y métodos',
-          'Bases de datos SQL con Access',
+          'Testing QA manual y automatizado',
+          'Diseño de casos de prueba',
+          'Reporte y seguimiento de errores',
+          'Validación de funcionalidades',
+          'Soft skills: comunicación y trabajo en equipo',
+          'Python básico: variables, condicionales, bucles y funciones',
         ],
       },
     ],
-    award: 'Examen final aprobado con calificación 10/10.',
+    award: null,
+  },
+  {
+    title: 'MERN Stack',
+    institution: 'Ministerio de Trabajo, Empleo e Industria',
+    date: 'Marzo 2023',
+    status: 'Finalizado',
+    description:
+      'Formación orientada al desarrollo web con stack MERN, incorporando herramientas para crear aplicaciones modernas con frontend, backend y base de datos.',
+    blocks: [
+      {
+        title: 'Temas cursados',
+        items: [
+          'MongoDB',
+          'Express.js',
+          'React',
+          'Node.js',
+          'Git',
+          'Visual Studio Code',
+        ],
+      },
+    ],
+    award: 'Credencial disponible',
+  },
+  {
+    title: 'Full Stack - Desarrollo Web',
+    institution: 'Codo a Codo 4.0 - Ciudad de Buenos Aires',
+    date: 'Julio 2023',
+    status: 'Finalizado',
+    description:
+      'Formación en desarrollo web full stack, trabajando conceptos de frontend, backend, bases de datos y buenas prácticas para construir aplicaciones web completas.',
+    blocks: [
+      {
+        title: 'Temas cursados',
+        items: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'Frontend',
+          'Backend',
+          'Bases de datos',
+        ],
+      },
+    ],
+    award: null,
   },
 ]
 
@@ -85,11 +129,13 @@ export function Education() {
                 <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground">
                   <GraduationCap className="size-5" />
                 </span>
+
                 <div>
                   <h3 className="text-lg font-semibold">{e.title}</h3>
                   <p className="text-sm text-primary">{e.institution}</p>
                 </div>
               </div>
+
               <div className="flex flex-col items-end gap-2">
                 <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground">
                   {e.status}
@@ -106,6 +152,7 @@ export function Education() {
               {e.blocks.map((b) => (
                 <div key={b.title}>
                   <h4 className="mb-3 font-semibold">{b.title}</h4>
+
                   <ul className="space-y-2">
                     {b.items.map((it) => (
                       <li

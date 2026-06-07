@@ -41,7 +41,7 @@ export function Hero() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/carolinacomba"
+              href="https://github.com/shiirpalacios2011"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -50,7 +50,7 @@ export function Hero() {
               <GithubIcon className="size-5" />
             </a>
             <a
-              href="https://linkedin.com/in/carolinacomba"
+              href="https://www.linkedin.com/in/shirleypalacios96/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -65,7 +65,7 @@ export function Hero() {
           <div className="relative rounded-3xl border border-border bg-card p-3 shadow-2xl shadow-primary/10">
             <div className="absolute -inset-0.5 -z-10 rounded-3xl bg-gradient-to-br from-primary/40 to-accent/40 opacity-60 blur" />
             <Image
-              src="/carolina.png"
+              src="/shirley.png"
               alt="Shirley Palacios"
               width={320}
               height={360}
