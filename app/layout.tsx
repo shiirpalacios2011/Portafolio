@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Carolina Comba — Desarrolladora Full Stack',
+  title: 'Shirley Palacios — Desarrolladora Full Stack',
   description:
-    'Portfolio de Carolina Comba, desarrolladora Full Stack de Córdoba, Argentina. Java, Spring Boot, C#, .NET, Angular y más.',
+    'Portfolio de Shirley Palacios, desarrolladora Full Stack de Córdoba, Argentina. Java, Spring Boot, C#, .NET, Angular y más.',
   generator: 'v0.app',
   icons: {
     icon: [
